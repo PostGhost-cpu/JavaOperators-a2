@@ -15,16 +15,15 @@ public class DialogWages {
     public static void main(String[] args) {
         // Input
         int hoursWorked = Integer.parseInt(JOptionPane.showInputDialog("Enter Total Hours Worked(Weekly)"));
-        hoursWorked = input.nextInt();
-        double payRate = Integer.parseInt(JOptionPane.showInputDialog("Enter Pay Rate(Per Hour)"));
-        payRate = input.nextInt();
+        float payRate = Integer.parseInt(JOptionPane.showInputDialog("Enter Pay Rate(Per Hour)"));
+        
         
         // Process
         double grossSalary = hoursWorked * payRate;
         double netSalary = grossSalary - 8;
         
         // Output
-        if(hoursWorked < 0 && payRate < 0) { // Check if the user entered anything or clicked Cancel/closed the dialog
+        if(hoursWorked > 0 && payRate > 0.00) { // Check if the user entered anything or clicked Cancel/closed the dialog
             JOptionPane.showMessageDialog(null, "Total earnings: R" + grossSalary + " Take-home pay: R" + netSalary);
         } else {
             JOptionPane.showMessageDialog(null, "Input cancelled, empty or less than 0.");

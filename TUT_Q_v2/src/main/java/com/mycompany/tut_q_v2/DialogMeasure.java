@@ -22,7 +22,7 @@ public class DialogMeasure {
         int perimeter = (2 * length) + (2 * width);
         
         //Output
-        if(width < 0 && length < 0) { // Check if the user entered anything or clicked Cancel/closed the dialog
+        if(width > 0 && length > 0) { // Check if the user entered anything or clicked Cancel/closed the dialog
             JOptionPane.showMessageDialog(null, "Area: " + area + "m^2" + " & Perimeter: " + perimeter + "m");
         } else {
             JOptionPane.showMessageDialog(null, "Input cancelled, empty or less than 0.");
