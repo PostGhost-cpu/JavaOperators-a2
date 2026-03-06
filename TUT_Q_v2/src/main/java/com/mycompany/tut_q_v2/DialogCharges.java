@@ -24,10 +24,6 @@ public class DialogCharges {
         double netAmount = totalCharged - (savings * totalCharged);
         
         // Output
-        if(singleSpacing > 0 && doubleSpacing > 0) { // Check if the user entered anything or clicked Cancel/closed the dialog
-            JOptionPane.showMessageDialog(null, "Gross earned: R" + totalCharged + "Net earned: R" + netAmount);
-        } else {
-            JOptionPane.showMessageDialog(null, "Input cancelled, empty or less than 0.");
-        }
+        JOptionPane.showMessageDialog(null, "Gross earned: R" + totalCharged + "Net earned: R" + netAmount);
     }
 }
